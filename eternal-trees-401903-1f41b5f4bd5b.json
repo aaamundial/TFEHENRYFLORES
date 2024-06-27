@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "eternal-trees-401903",
+  "private_key_id": "1f41b5f4bd5b55b51675b59841d58cddf0ed1ce2",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDMMCF8C4XFu0as\nZv1eTyLaS/F2mZpKS55OCje5wOBQxegjXV/po5cXgdzJbaQi+b7xzb06fJ16l/qC\nhCCTuVcaFHwdiN5cdzlVDnfUXp2kmLkeEO8/uhQjdZy3xTKTNWLF9Ntu6r6f9h51\nroVbZWe+hucMlL6u1fo6KC2CQ07rxnIg66lS99hKyTZDlRmKvunjVFSEj/AOpxx9\nFhbJueUMRm8Yjq6UOLDHhz0yJFkscBlyKYsh6jprI3WZVFGQfM9zNJ1V4qwXSUIX\na8m4sRc4D5YxBuo5GtG1OkSp9vFMWUoLHBsjJUdnVJnHy7TgS/bmowQmJdLUvFp3\nYHq/rq/BAgMBAAECggEAGCyOmlAG620LpfefgZ3e43dgRAlVcfxX5qdhB5XlOMrl\ne+JfK5sZlUfjqtlXOGjXCWuxPo5oWo5Js1APR04HGOhZ9Wkx4kKfQAmxeCwnf8gx\nCnU4zhOqtLQE9ODc5v7IDeW6YPxbyzZpTsd1tGdiC/WOvzeRB8P/lwkQsj5jxpgG\n0zSmsrk96f0T0bO3DjLba4zhWyoEocwrFd8P/E/Cz/VUWAAxIZTQq33h/YtN7Gmr\nDuYbs4rqP++tmyph6dSnj+VYjkaKLQz8ph3UTYBbAEPZgR8pHhSr1OKW56LLzSR/\nbCT7dAFuPGjvJEVCrv4X5YI6W2UH2V0gg5Lo+M4NfQKBgQDveQ+Vdaa23rcfLQaB\nUVG5XYUeb7eK0K9KlOaQE0optahqyjfwK/5i0T80miwC8Y9QAz5H1xTGjNK6F6VH\nqPFSUAc2rvT9zxxwSuhHWFbN7LRtUTWK2EhmKoutb0dYvuYgoygGDAu0GtA2qmsE\ncQe3ylxukEsmSaFTZv1+zBsnhwKBgQDaR6qn5V6SMBaEiUrVRBYhkCBplWCZ6A7z\n2z9E4JxvOweWZG1XHE96dfMfzqoPTWaxl8sCCrTLoyBpUuYR6jtM8rZYDFlCVtod\nFm/2iYHlPHsSidBPEjzDMDLe0ZO8DljptOHItawxR3aku6Lo2I7AIUDyYHULa8Ma\nTzFxOKowdwKBgFUXSDFMX9PE6X67af9TXN2n3GBHRAmgQ1kV9aMmJ4kQkmp3tk6x\n4y9LuNDBI3hcSxccP+oZA7nVWh9jvYfsAOvFofqNSmJRUIKaK1UGj7mWLTpWy9at\nKXScE4up6ckf8/eO4e7cIuB5UpjKD0LBwwNMdXGX9gwBx8Ax7Us7zT5LAoGAX4rr\nCd5+DKL72Dt4A+1venVpmo2F4RgQI3EeOnnOP2mpIo0GxxBfQY0LRCrjiRsqDiYQ\n9+3TwSa/8xoUFldeaYn7goK1NzJo+j5t942sy7gzbqPgCBxFeHJKcfluHuxwwqso\nAQB0RIWxSt3OqvjPUw27LdxGnx8mIQf07kgNRnUCgYEAlSAnzssV7YMEbg/ZGawQ\nKSy6PcfmXuieYiOR9Ff4j3p0toCkBwR59nL7SDU6ChhgL/38PcigTaTfT7dhHJ22\nQqGlln7/0dyqr+y/JsS+XGY5jOwoB2wj6ze9asqdeasXypsTxteqA5Nt0IDfoHz+\nFa+0HTyFe5Bz8CXG8drjSrA=\n-----END PRIVATE KEY-----\n",
+  "client_email": "amu-ia@eternal-trees-401903.iam.gserviceaccount.com",
+  "client_id": "112995633739756753776",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/amu-ia%40eternal-trees-401903.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

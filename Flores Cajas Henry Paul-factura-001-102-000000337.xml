@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<factura id="comprobante" version="1.1.0">
+  <infoTributaria>
+    <ambiente>2</ambiente>
+    <tipoEmision>1</tipoEmision>
+    <razonSocial>Flores Cajas Henry Paul</razonSocial>
+    <nombreComercial>AAAMUNDIAL</nombreComercial>
+    <ruc>1718249749001</ruc>
+    <claveAcceso>2606202401171824974900120011020000003182820275812</claveAcceso>
+    <codDoc>01</codDoc>
+    <estab>001</estab>
+    <ptoEmi>102</ptoEmi>
+    <secuencial>000000318</secuencial>
+    <dirMatriz>Los Geraneos 17</dirMatriz>
+    <contribuyenteRimpe>CONTRIBUYENTE RÉGIMEN RIMPE</contribuyenteRimpe>
+  </infoTributaria>
+  <infoFactura>
+    <fechaEmision>26/06/2024</fechaEmision>
+    <dirEstablecimiento>Calle: LOS GERANEOS Número: 17 </dirEstablecimiento>
+    <obligadoContabilidad>NO</obligadoContabilidad>
+    <tipoIdentificacionComprador>05</tipoIdentificacionComprador>
+    <razonSocialComprador>FLORES CAJAS JETHY JAZMIN</razonSocialComprador>
+    <identificacionComprador>1718573387</identificacionComprador>
+    <totalSinImpuestos>0.01</totalSinImpuestos>
+    <totalDescuento>0.00</totalDescuento>
+    <totalConImpuestos>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>4</codigoPorcentaje>
+        <baseImponible>0.01</baseImponible>
+        <valor>0.00</valor>
+      </totalImpuesto>
+    </totalConImpuestos>
+    <propina>0.00</propina>
+    <importeTotal>0.01</importeTotal>
+    <moneda>DOLAR</moneda>
+    <pagos>
+      <pago>
+        <formaPago>01</formaPago>
+        <total>0.01</total>
+      </pago>
+    </pagos>
+  </infoFactura>
+  <detalles>
+    <detalle>
+      <codigoPrincipal>ATS 101</codigoPrincipal>
+      <descripcion>PROMOCIÓN Anexo Transaccional Simplificado 2024 + SOFTWARE AMU + PLANTILLAS + 2 CLASES EXTRAS</descripcion>
+      <cantidad>1.000000</cantidad>
+      <precioUnitario>0.010000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>0.01</precioTotalSinImpuesto>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>4</codigoPorcentaje>
+          <tarifa>15.00</tarifa>
+          <baseImponible>0.01</baseImponible>
+          <valor>0.00</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+  </detalles>
+</factura>

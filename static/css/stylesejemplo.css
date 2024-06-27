@@ -1,0 +1,127 @@
+body {
+    background-color: #0f0f0f;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #0f0f0f;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.public-header-logo svg {
+    width: 100px;
+    height: auto;
+}
+
+.public-header-menu {
+    display: flex;
+    align-items: center;
+}
+
+.public-header-menu-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.public-header-menu-items li {
+    display: inline;
+}
+
+.public-header-menu-items a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.login-button {
+    background-color: #00C48F;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.hamburguer-menu {
+    display: none; /* Hidden for desktop, show on mobile if needed */
+}
+
+header h1 {
+    color: #00C48F;
+    font-size: 48px;
+    font-weight: bold;
+    margin-top: 120px; /* Adjust as necessary */
+}
+
+header p {
+    color: #ffffff;
+    font-size: 24px;
+    margin-bottom: 50px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+form input {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #00C48F;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 18px;
+    width: 400px;
+    margin-right: 10px;
+}
+
+form button {
+    background-color: #00C48F;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: #1a1a1a;
+    color: #00C48F;
+    border: 1px solid #00C48F;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}

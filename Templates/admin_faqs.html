@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Administración de FAQs</title>
+</head>
+<body>
+    <h1>Administración de FAQs</h1>
+    {% for faq in faqs %}
+        <div>
+            <h3>{{ faq.pregunta }}</h3>
+            <p>{{ faq.respuesta }}</p>
+        </div>
+    {% endfor %}
+</body>
+</html>

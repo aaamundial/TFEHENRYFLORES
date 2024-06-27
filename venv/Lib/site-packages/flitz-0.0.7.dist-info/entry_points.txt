@@ -1,0 +1,3 @@
+[console_scripts]
+flitz=flitz.cli:entry_point
+

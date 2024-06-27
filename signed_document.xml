@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<factura id="comprobante" version="1.1.0">
+  <infoTributaria>
+    <ambiente>2</ambiente>
+    <tipoEmision>1</tipoEmision>
+    <razonSocial>Flores Cajas Henry Paul</razonSocial>
+    <nombreComercial>AAAMUNDIAL</nombreComercial>
+    <ruc>1718249749001</ruc>
+    <claveAcceso>2506202401171824974900120011020000003172820274816</claveAcceso>
+    <codDoc>01</codDoc>
+    <estab>001</estab>
+    <ptoEmi>102</ptoEmi>
+    <secuencial>000000317</secuencial>
+    <dirMatriz>Los Geraneos 17</dirMatriz>
+    <contribuyenteRimpe>CONTRIBUYENTE RÉGIMEN RIMPE</contribuyenteRimpe>
+  </infoTributaria>
+  <infoFactura>
+    <fechaEmision>25/06/2024</fechaEmision>
+    <dirEstablecimiento>Calle: LOS GERANEOS Número: 17 </dirEstablecimiento>
+    <obligadoContabilidad>NO</obligadoContabilidad>
+    <tipoIdentificacionComprador>05</tipoIdentificacionComprador>
+    <razonSocialComprador>FLORES CAJAS JETHY JAZMIN</razonSocialComprador>
+    <identificacionComprador>1718573387</identificacionComprador>
+    <totalSinImpuestos>0.01</totalSinImpuestos>
+    <totalDescuento>0.00</totalDescuento>
+    <totalConImpuestos>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>4</codigoPorcentaje>
+        <baseImponible>0.01</baseImponible>
+        <valor>0.00</valor>
+      </totalImpuesto>
+    </totalConImpuestos>
+    <propina>0.00</propina>
+    <importeTotal>0.01</importeTotal>
+    <moneda>DOLAR</moneda>
+    <pagos>
+      <pago>
+        <formaPago>01</formaPago>
+        <total>0.01</total>
+      </pago>
+    </pagos>
+  </infoFactura>
+  <detalles>
+    <detalle>
+      <codigoPrincipal>ATS 101</codigoPrincipal>
+      <descripcion>PROMOCIÓN Anexo Transaccional Simplificado 2024 + SOFTWARE AMU + PLANTILLAS + 2 CLASES EXTRAS</descripcion>
+      <cantidad>1.000000</cantidad>
+      <precioUnitario>0.010000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>0.01</precioTotalSinImpuesto>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>4</codigoPorcentaje>
+          <tarifa>15.00</tarifa>
+          <baseImponible>0.01</baseImponible>
+          <valor>0.00</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+  </detalles>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#" Id="Signature053800"><ds:SignedInfo Id="Signature-SignedInfo862232"><ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/><ds:Reference Id="SignedPropertiesIDc9a843" Type="http://uri.etsi.org/01903#SignedProperties" URI="#SignatureSignature053800-SignedProperties24798"><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>HYYJa6+U/BSZWawY/8phFHocARM=</ds:DigestValue></ds:Reference><ds:Reference URI="#Certificate59dd182"><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>zNr0VZ9XDPY43eVlg0vd0QmXjv4=</ds:DigestValue></ds:Reference><ds:Reference Id="Reference-ID-f3445c" URI="#comprobante"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>s6qALmIoUG2GM8kIcZ6nrQSbmCo=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue Id="SignatureValuef46f73">b4rzRzeEaH99bI6uwhlNSaVIccpBZE4tx3exASW0ndlqkMcs37iboX2pJ3/Dsx6NfcUsbZ+bdx7ZSk4xFsw1C15F+6OKbSElGAmLtRiK3Kufb+LQxASObO6nrRXkW6+6cOWu+l+JzoPE/v4oNvBLvnf007BbWJpJKdUg2gh7ESClmgF16FvHgw87MPBqzITN7Vy3arEuJw0CEkVapwBAmuQ78petAFABVTo236/EFSXtC9VMpf9BF4P+tQfGACtV+XWERlhqHTux7tT8oLt8r7gXcG67EJWD1K/XKaJ7P0u7+fr+DYeMbqbvIllm4SAWBpP5WziX7QcHytR6pE8baA==</ds:SignatureValue><ds:KeyInfo Id="Certificate59dd182"><ds:X509Data><ds:X509Certificate>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</ds:X509Certificate></ds:X509Data><ds:KeyValue><ds:RSAKeyValue><ds:Modulus>sSYLycYQj6+G1RhqpugrFTH9xosT8nQp/UrofSEeD4hltN7fveKsQUXPqIu1hV+DxsG+dwH7XSGDUbhYocVv6V8FVyv60j9CkwpJm0Z9nZR/IYrYQSEGgHOXIOZRZmpNf0cGN7LYYVDsf/HPy2Nyu1cFoHcQtuVzXnAcuK3iWM6CcfpzNQjX02S9S5V+OfHMSTe+LEWvu2LYgI1Ofg7T1mhGYsfTKk0fVSsmugMpZaRwtKBO6CJtT6fdjECDwF+vwCXhfBzu1ng7n3q97HtXzVQyJkR8Vw9K2z5b+/XDXsJdQaW68QBba3aBSDuY/jmzXI1O4ca6TEWD7x4q+ufxpQ==</ds:Modulus><ds:Exponent>AQAB</ds:Exponent></ds:RSAKeyValue></ds:KeyValue></ds:KeyInfo><ds:Object Id="SignatureSignature053800-Objectf90a21"><etsi:QualifyingProperties Target="#Signature053800"><etsi:SignedProperties Id="SignatureSignature053800-SignedProperties24798"><etsi:SignedSignatureProperties><etsi:SigningTime>2024-06-25T20:41:50-05:00</etsi:SigningTime><etsi:SigningCertificate><etsi:Cert><etsi:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>wt2jmJ3KQueVxiU1Lvu8Qnr4GnI=</ds:DigestValue></etsi:CertDigest><etsi:IssuerSerial><ds:X509IssuerName>countryName=EC,organizationName=BANCO CENTRAL DEL ECUADOR,organizationalUnitName=ENTIDAD DE CERTIFICACION DE INFORMACION-ECIBCE,localityName=QUITO,commonName=AC BANCO CENTRAL DEL ECUADOR</ds:X509IssuerName><ds:X509SerialNumber>1534314477</ds:X509SerialNumber></etsi:IssuerSerial></etsi:Cert></etsi:SigningCertificate></etsi:SignedSignatureProperties><etsi:SignedDataObjectProperties><etsi:DataObjectFormat ObjectReference="#Reference-ID-f3445c"><etsi:Description>contenido comprobante</etsi:Description><etsi:MimeType>text/xml</etsi:MimeType></etsi:DataObjectFormat></etsi:SignedDataObjectProperties></etsi:SignedProperties></etsi:QualifyingProperties></ds:Object></ds:Signature></factura>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Declaraciones Tributarias</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div id="app">
+        <h1>Gestión de Declaraciones Tributarias</h1>
+        <form @submit.prevent="submitVoiceCommand">
+            <button type="button" @click="recordVoice">Hablar</button>
+            <button type="submit">Declarar</button>
+        </form>
+        <form @submit.prevent="sendPregunta">
+            <input v-model="pregunta" placeholder="Escribe tu pregunta">
+            <button type="submit">Preguntar</button>
+        </form>
+        <div id="respuesta-container" class="respuesta-container">
+            <p><strong>Respuesta:</strong> <span v-html="respuesta"></span></p>
+        </div>
+        <div id="confirmacion-container" class="confirmacion-container" v-if="ordenInterpretada">
+            <p><strong>Orden Interpretada:</strong> {{ ordenInterpretada }}</p>
+            <button @click="confirmarOrden(true)">Aceptar</button>
+            <button @click="confirmarOrden(false)">Rechazar</button>
+        </div>
+        <form @submit.prevent="uploadPDF" enctype="multipart/form-data">
+            <label for="pdf_file">Subir PDF:</label>
+            <input type="file" id="pdf_file" @change="handleFileUpload">
+            <button type="submit">Subir PDF y Generar FAQs</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                orden: '',
+                pregunta: '',
+                respuesta: 'Esperando respuesta...',
+                ordenInterpretada: '',
+                pdfFile: null
+            },
+            methods: {
+                recordVoice() {
+                    fetch('/api/voice-command', { method: 'POST' })
+                        .then(response => response.json())
+                        .then(data => {
+                            this.orden = data.orden;
+                            console.log('Orden grabada:', this.orden);
+                        });
+                },
+                submitVoiceCommand() {
+                    fetch('/api/declaracion', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            url: 'https://srienlinea.sri.gob.ec/auth/realms/Internet/protocol/openid-connect/auth?client_id=app-sri-claves-angular&redirect_uri=https%3A%2F%2Fsrienlinea.sri.gob.ec%2Fsri-en-linea%2F%2Fcontribuyente%2Fperfil&state=923d6b7e-e718-4383-8e8b-42d1ac3d037c&nonce=8cd8d75d-a789-4f1d-b46c-ba21ed6ed04b&response_mode=fragment&response_type=code&scope=openid',
+                            usuario: '1718249749001',
+                            contraseña: 'Mlies2023.',
+                            orden: this.orden,
+                            api_key_recaptcha: 'TU_API_KEY',
+                            site_key_recaptcha: 'SITE_KEY_DEL_PORTAL'
+                        })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        this.ordenInterpretada = this.orden;
+                        console.log(data);
+                    });
+                },
+                sendPregunta() {
+                    fetch('/api/chatbot', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            pregunta: this.pregunta
+                        })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        this.respuesta = data.respuesta || "No se pudo obtener una respuesta.";
+                    })
+                    .catch(error => {
+                        console.error('Error al obtener la respuesta:', error);
+                        this.respuesta = "Ocurrió un error al obtener la respuesta.";
+                    });
+                },
+                confirmarOrden(aceptar) {
+                    fetch('/api/declaracion', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            url: 'https://srienlinea.sri.gob.ec/auth/realms/Internet/protocol/openid-connect/auth?client_id=app-sri-claves-angular&redirect_uri=https%3A%2F%2Fsrienlinea.sri.gob.ec%2Fsri-en-linea%2F%2Fcontribuyente%2Fperfil&state=923d6b7e-e718-4383-8e8b-42d1ac3d037c&nonce=8cd8d75d-a789-4f1d-b46c-ba21ed6ed04b&response_mode=fragment&response_type=code&scope=openid',
+                            usuario: '1718249749001',
+                            contraseña: 'Mlies2023.',
+                            orden: this.ordenInterpretada,
+                            api_key_recaptcha: 'TU_API_KEY',
+                            site_key_recaptcha: 'SITE_KEY_DEL_PORTAL',
+                            aceptar: aceptar
+                        })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log(data);
+                        alert(aceptar ? "Orden aceptada y procesada." : "Orden rechazada.");
+                        this.ordenInterpretada = '';
+                    });
+                },
+                handleFileUpload(event) {
+                    this.pdfFile = event.target.files[0];
+                },
+                uploadPDF() {
+                    const formData = new FormData();
+                    formData.append('pdf_file', this.pdfFile);
+
+                    fetch('/admin/faqs', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.status === "success") {
+                            alert("PDF subido y FAQs generadas: " + data.message);
+                            // Aquí puedes actualizar la lista de FAQs si lo deseas
+                            this.getFAQs();
+                        } else {
+                            alert("Error al subir el PDF: " + data.message);
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error al subir el PDF:', error);
+                        alert("Ocurrió un error al subir el PDF.");
+                    });
+                },
+                getFAQs() {
+                    fetch('/admin/faqs', {
+                        method: 'GET',
+                        headers: {
+                            'X-Requested-With': 'XMLHttpRequest'
+                        }
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        this.faqs = data.faqs;
+                    })
+                    .catch(error => {
+                        console.error('Error al obtener FAQs:', error);
+                    });
+                }
+            }
+        });
+    </script>
+</body>
+</html>

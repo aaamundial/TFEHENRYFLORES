@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Aplicación de IA</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesejemplo.css') }}">
+</head>
+<body>
+    <header>
+        <div class="public-header">
+            <figure class="public-header-logo">
+                <svg width="1em" height="1em" fill="none" viewBox="0 0 92 32" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="#0AE98A" clip-path="url(#platzi-logo-new_svg__a)">
+                        <!-- SVG content here -->
+                    </g>
+                    <defs>
+                        <clipPath id="platzi-logo-new_svg__a">
+                            <path fill="#fff" d="M.461 0h91.077v32H.461z"></path>
+                        </clipPath>
+                    </defs>
+                </svg>
+            </figure>
+            <nav class="public-header-menu">
+                <ul class="public-header-menu-items">
+                    <li><a href="/cursos/">Explorar</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropdown-button">Comunidad <svg width="1em" height="1em" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#C4C8CE" fill-rule="evenodd" d="M7.47 9.47a.75.75 0 0 1 1.06 0L12 12.94l3.47-3.47a.75.75 0 1 1 1.06 1.06l-4 4a.75.75 0 0 1-1.06 0l-4-4a.75.75 0 0 1 0-1.06" clip-rule="evenodd"></path></svg></button>
+                        </div>
+                    </li>
+                    <li><a href="/precios/">Planes</a></li>
+                    <li><a href="/#b2bPlans">Empresas</a></li>
+                </ul>
+            </nav>
+            <button class="login-button" type="button">Acceder</button>
+            <span class="hamburguer-menu">
+                <button class="hamburguer-trigger" id="hamburguerCTA" aria-label="Hamburguer Menu">
+                    <svg width="1em" height="1em" fill="none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="#fff" fill-rule="evenodd" d="M1.5 4.002a.5.5 0 0 1 .5-.5h12a.5.5 0 1 1 0 1H2a.5.5 0 0 1-.5-.5m0 4.001a.5.5 0 0 1 .5-.5h12a.5.5 0 1 1 0 1H2a.5.5 0 0 1-.5-.5m0 4.002a.5.5 0 0 1 .5-.5h12a.5.5 0 1 1 0 1H2a.5.5 0 0 1-.5-.5" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </span>
+        </div>
+    </header>
+    <section>
+        <h1>La escuela de tecnología de Latinoamérica</h1>
+        <p>Más de 5 millones de estudiantes y más de 3,000 empresas aprenden en [TuNombreDeApp]</p>
+        <form method="POST">
+            <input type="text" name="search" placeholder="¿Qué quieres aprender?" value="{{ search_query }}">
+            <button type="submit">Buscar</button>
+        </form>
+    </section>
+    <section class="cards-container">
+        <div class="card">Data Science e Inteligencia Artificial</div>
+        <div class="card">Ciberseguridad</div>
+        <div class="card">Liderazgo y Management</div>
+        <div class="card">English Academy</div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,22 @@
+[
+    {
+        "pregunta": "¿Qué es el IVA?",
+        "respuesta": "El IVA es un impuesto al valor agregado."
+    },
+    {
+        "pregunta": "¿Cómo declaro el IVA?",
+        "respuesta": "Debes seguir los pasos indicados en la página del SRI."
+    },
+    {
+        "pregunta": "¿Cuándo debo pagar el IVA?",
+        "respuesta": "El IVA se paga mensualmente o semestralmente dependiendo de tu régimen."
+    },
+    {
+        "pregunta": "¿Qué documentos necesito para declarar el IVA?",
+        "respuesta": "Necesitas tus facturas y comprobantes de ingresos."
+    },
+    {
+        "pregunta": "¿Cómo calculo el IVA?",
+        "respuesta": "El IVA se calcula sobre el valor de las ventas y servicios."
+    }
+]
